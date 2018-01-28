@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouMayHaveMail.CSharp", "YouMayHaveMail.CSharp.csproj", "{C23F74D2-152E-8892-4A26-01A1BA57DE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouMayHaveMail.CSharp.Plugins", "YouMayHaveMail.CSharp.Plugins.csproj", "{CFAC2283-9AF3-830F-C4AD-9BD6E674BECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouMayHaveMail.CSharp.Editor", "YouMayHaveMail.CSharp.Editor.csproj", "{3345C54B-75C1-7850-9E0D-3741D7E6CF8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C23F74D2-152E-8892-4A26-01A1BA57DE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23F74D2-152E-8892-4A26-01A1BA57DE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23F74D2-152E-8892-4A26-01A1BA57DE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23F74D2-152E-8892-4A26-01A1BA57DE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAC2283-9AF3-830F-C4AD-9BD6E674BECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAC2283-9AF3-830F-C4AD-9BD6E674BECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAC2283-9AF3-830F-C4AD-9BD6E674BECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAC2283-9AF3-830F-C4AD-9BD6E674BECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3345C54B-75C1-7850-9E0D-3741D7E6CF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3345C54B-75C1-7850-9E0D-3741D7E6CF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3345C54B-75C1-7850-9E0D-3741D7E6CF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3345C54B-75C1-7850-9E0D-3741D7E6CF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
