@@ -20,7 +20,7 @@ public class logic_intro : MonoBehaviour {
         this._introSprite.color = new Color(1f, 1f, 1f, 0f);
         this._introSprite.enabled = true;
 
-        if (Global.lastShownIntro == introID || introID == "")
+        if (introID == "")
         {
             Destroy(this);
             return;
@@ -40,27 +40,22 @@ public class logic_intro : MonoBehaviour {
             this._currentAlpha += fadeInSpeed;
 
             if (this._currentAlpha >= 0.9f)
-            {
-                this._fadeType = 1;
-
-                Timer.Simple(this.fadeTime, () =>
-                {
-                    this._fadeType = 2;
-                    this._currentAlpha = 1f;
-                });
+            {           
+                this._fadeType = 2;
+                this._currentAlpha = 1f;
             }
         }
         else if (this._currentAlpha >= 0f && this._fadeType == 2)
         {
             float alpha = Mathf.Lerp(0, 1f, this._currentAlpha);
             this._introSprite.color = new Color(1f, 1f, 1f, alpha);
-            this._currentAlpha -= fadeInSpeed;
+            this._currentAlpha -= fadeOutSpeed;
 
             if (this._currentAlpha <= 0f)
             {
-                this._fadeType = 4;
+                this._fadeType = 3;
                 this._introSprite.enabled = false;
-                Destroy(this);
+                return;
             }
         }
 	}

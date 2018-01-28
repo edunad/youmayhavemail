@@ -239,9 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d81d61c79b3fc4790fed464e9dc954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introID: lvl0
+  introID: lvlBelfast
   fadeInSpeed: 0.05
-  fadeOutSpeed: 0.05
+  fadeOutSpeed: 0.01
   fadeTime: 2
 --- !u!212 &212072097159488810
 SpriteRenderer:
@@ -321,7 +321,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31bc95eb6faab474ca63ca2935d6c48e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2feaebb3b27ad0f408e0924c34500bd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0

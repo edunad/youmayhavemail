@@ -31,8 +31,8 @@ namespace Assets.Scripts.General
 
         public static void Update()
         {
-            /*try
-            {*/
+            try
+            {
                 if (_timers == null || _timers.Count < 0)
                 {
                     if (MxTimer > 0) MxTimer = 0; // Reset unique
@@ -45,12 +45,12 @@ namespace Assets.Scripts.General
                     if (_timers[name] != null)
                         _timers[name].UpdateTimer();
                 }
-            /*}
+            }
             catch(Exception err)
             {
                 // TODO : ERROR SEND
                 Debug.Log(err.StackTrace);
-            }*/
+            }
         }
 
         public static Timer Simple(float delay, Action func)
@@ -99,7 +99,7 @@ namespace Assets.Scripts.General
 
         private void UpdateTimer()
         {
-            var t = (float) Time.time;
+            var t = (float)Time.time;
             if (t >= _fNextIteration)
             {
                 if (Func != null) 

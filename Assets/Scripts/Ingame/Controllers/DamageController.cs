@@ -15,7 +15,6 @@ public class DamageController : MonoBehaviour {
     private float _oldPower;
 
     public float damagePerSecond = 0.5f;
-    public float regainHealthDelay = 1f;
     public float maxShakePower = 0.3f;
 
     [HideInInspector]
@@ -52,10 +51,7 @@ public class DamageController : MonoBehaviour {
         {
             if (stat != RevealStates.Hidden && !this._canRegainHealth)
             {
-                Timer.UniqueSimple("regainHealth", regainHealthDelay, () =>
-                {
-                    this._canRegainHealth = true;
-                });
+                this._canRegainHealth = true;
             }
 
             this._lastState = stat;
@@ -84,7 +80,7 @@ public class DamageController : MonoBehaviour {
         }
         else if(_canRegainHealth && this.playerHealth < 100)
         {
-            this.playerHealth = Mathf.Clamp(this.playerHealth + this.damagePerSecond, 0, 100);
+            this.playerHealth = Mathf.Clamp(this.playerHealth + 0.3f, 0, 100);
         }
         #endregion
 

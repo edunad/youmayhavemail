@@ -56,12 +56,9 @@ public class IntroManager : MonoBehaviour {
         this.allowFade = true;
     }
 
-    private void FixedUpdate()
-    {
-        Timer.Update();
-    }
-
     private void Update () {
+        Timer.Update();
+
         if (this.ALLDONE) return;
 
         if (this.allowFade && this.fadeTimer < 1 && !this.endLevel)

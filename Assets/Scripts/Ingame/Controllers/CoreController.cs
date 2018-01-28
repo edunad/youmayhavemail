@@ -33,13 +33,10 @@ public class CoreController : MonoBehaviour {
         CoreController._cloud = GameObject.Find("Cloud");
 	}
 
-    private void FixedUpdate()
-    {
-        Timer.Update();
-	}
-
     private void Update()
     {
+        Timer.Update();
+
         if (!CoreController.ArePlayersDead || !CoreController._canRetry) return;
         if (Input.GetButtonDown("Reset"))
         {
@@ -60,11 +57,7 @@ public class CoreController : MonoBehaviour {
         CoreController._cloud.SendMessage("OnDeath", msg, SendMessageOptions.DontRequireReceiver);
 
         Global.deathCounter += 1;
-
-        Timer.Simple(1f, () =>
-        {
-            CoreController._canRetry = true;
-            CoreController._gameOverRenderer_paper.enabled = true;
-        });
+        CoreController._canRetry = true;
+        CoreController._gameOverRenderer_paper.enabled = true;
     }
 }

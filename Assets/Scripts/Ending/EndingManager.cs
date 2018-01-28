@@ -10,28 +10,9 @@ public class EndingManager : MonoBehaviour {
     public Text TextDecrypt;
     public Text Deaths;
 
-	public void Awake () {
-        this.TextDecrypt.text = "DECRYPTING MESSAGE";
-        this.Deaths.text = "";
-
-        /* Lazy made*/
-        Timer.Simple(1f, () =>
-        {
-            this.TextDecrypt.text = "DECRYPTING MESSAGE.";
-            Timer.Simple(1f, () =>
-            {
-                this.TextDecrypt.text = "DECRYPTING MESSAGE..";
-                Timer.Simple(1f, () =>
-                {
-                    this.TextDecrypt.text = "DECRYPTING MESSAGE...";
-                    Timer.Simple(1f, () =>
-                    {
-                        this.TextDecrypt.text = this.obfuscateMessage(Global.EmailMessage);
-                        this.Deaths.text = "Deaths : " + Global.deathCounter;
-                    });
-                });
-            });
-        });
+	public void Start () {
+        this.TextDecrypt.text = this.obfuscateMessage(Global.EmailMessage);
+        this.Deaths.text = "Deaths : " + Global.deathCounter;
     }
 
     public string obfuscateMessage(string message)
@@ -55,9 +36,4 @@ public class EndingManager : MonoBehaviour {
 
         return msg.ToString();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        Timer.Update();
-	}
 }
